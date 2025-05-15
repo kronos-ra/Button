@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mini Webseite</title>
   <style>
     * {
@@ -11,12 +11,14 @@
       box-sizing: border-box;
     }
 
-    body {
+    html, body {
+      width: 245px;
+      height: 84px;
+      background: #0c0c0c;
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
-      background: rgb( 255,255,255,0);	
+      overflow: hidden; /* verhindert Scrollbar */
     }
 
     a {
@@ -25,15 +27,15 @@
       display: block;
       text-decoration: none;
       width: 200px;
-      overflow: hidden;!important;
+      overflow: hidden;
       border-radius: 20px;
     }
 
     a span {
       position: relative;
       color: #fff;
-      font-size: 17px;
-      font-family: 'Cormorant Garamond';
+      font-size: 16px;
+      font-family: 'Cormorant Garamond', serif;
       letter-spacing: 0px;
       z-index: 1;
     }
