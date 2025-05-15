@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8">
   <title>Liquid Button</title>
+  <!-- Google Fonts: Cormorant Garamond -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
   <style>
-    * { 
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
       display: flex;
       align-items: center;
@@ -16,36 +15,46 @@
       min-height: 100vh;
       background: transparent;
     }
+
     a {
       position: relative;
       padding: 20px 50px;
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-decoration: none;
-      text-transform: uppercase;
-      width: 200px;
+      /* Kein text-transform, damit Groß/Kleinschreibung exakt bleibt */
+      width: 240px;
       overflow: hidden;
       border-radius: 40px;
       background: none;
       box-shadow: 0 8px 32px rgba(73, 115, 255, 0.20);
     }
+
     a span {
       position: relative;
       color: #fff;
-      font-size: 20px;
-      font-family: Cormorand-Garmont, sans-serif;
-      letter-spacing: 8px;
+      font-size: 28px;
+      font-family: 'Cormorant Garamond', serif;
+      letter-spacing: 2px;
       z-index: 1;
+      text-align: center;
+      width: 100%;
+      font-weight: 700;
+      display: block;
     }
+
     a .liquid {
       position: absolute;
       top: -80px;
       left: 0;
-      width: 200px;
-      height: 200px;
-      background: #c3a995;
+      width: 240px;
+      height: 240px;
+      background: #c3a995; /* Cappuccino */
       box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
       transition: .5s;
     }
+
     a .liquid::after,
     a .liquid::before {
       content: '';
@@ -57,32 +66,32 @@
       transform: translate(-50%, -75%);
       background: #000;
     }
+
     a .liquid::before {
       border-radius: 45%;
-      background: rgba(80, 50, 30, 1);
+      background: rgba(80, 50, 30, 1); /* Dunkles Braun */
       animation: animate 5s linear infinite;
     }
+
     a .liquid::after {
       border-radius: 40%;
-      background: rgba(80, 50, 30, 0.6);
+      background: rgba(80, 50, 30, 0.6); /* Braun, halbtransparent */
       animation: animate 10s linear infinite;
     }
+
     a:hover .liquid {
       top: -120px;
     }
+
     @keyframes animate {
-      0% {
-        transform: translate(-50%, -75%) rotate(0deg);
-      }
-      100% {
-        transform: translate(-50%, -75%) rotate(360deg);
-      }
+      0%   { transform: translate(-50%, -75%) rotate(0deg); }
+      100% { transform: translate(-50%, -75%) rotate(360deg); }
     }
   </style>
 </head>
 <body>
-  <a href="https://dein-link.de" target="_blank">
-    <span>Button</span>
+  <a href="#">
+    <span>Mehr erfahren</span>
     <div class="liquid"></div>
   </a>
 </body>
