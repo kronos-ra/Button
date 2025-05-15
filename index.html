@@ -20,33 +20,33 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      text-decoration: none;
-      width: 320px;         /* NUR Breite für längeren Text */
-      height: 100px;        /* Originalhöhe für Welleneffekt */
-      border-radius: 50px;
+      width: 340px;   /* ORIGINAL BREITE! */
+      height: 120px;  /* ORIGINAL HÖHE! */
+      border-radius: 60px;
       overflow: hidden;
       background: none;
       box-shadow: 0 8px 32px rgba(73, 115, 255, 0.20);
+      text-decoration: none;
     }
 
     a span {
       color: #fff;
-      font-size: 38px;  /* Schriftgröße wie gewünscht, ggf. anpassen */
+      font-size: 38px;  /* ggf. auf 34px oder 32px reduzieren wenn Text zu lang */
       font-family: 'Cormorant Garamond', serif;
       font-weight: 700;
       z-index: 1;
       text-align: center;
       width: 100%;
-      line-height: 1;   /* Kein Zeilenabstand, Text bleibt mittig */
-      letter-spacing: 2px;
+      letter-spacing: 1px;
+      line-height: 1;
     }
 
     a .liquid {
       position: absolute;
       top: -80px;
       left: 0;
-      width: 320px;    /* Muss identisch zur Buttonbreite sein! */
-      height: 200px;   /* Originalhöhe für Welleneffekt */
+      width: 340px;    /* Muss exakt mit a übereinstimmen! */
+      height: 200px;   /* ORIGINALWERT */
       background: #c3a995;
       box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
       transition: .5s;
